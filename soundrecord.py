@@ -1,4 +1,4 @@
-#!
+#!/usr/bin/env python 3
 import pyaudio
 import wave
 import time
