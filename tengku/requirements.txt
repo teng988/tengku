@@ -1,0 +1,3 @@
+flask
+pyaudio
+python-crontab
