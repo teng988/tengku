@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Year Project</title>
+    <link rel="stylesheet" href="../static/styles/main.css">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}" -->
+</head>
+
+<body>
+    <h1>Ecoacoustic Monitoring with Raspberry Pi</h1>
+    <div class="container">
+        <form method="POST" action="/submit">
+            <div class="tableclass">
+                <table cellpadding=10 cellspacing=10" align="center">
+                    <tr>
+                        <td>
+                            <div class="col-25">
+                                <label for="chans">Chans</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col-75">
+                                <input type="text" name="chans" id="chans" placeholder="Enter the Chans" value="1">
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="col-25">
+                                <label for="samp_rate">Samp Rate</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col-75">
+                                <input type="text" name="samp_rate" id="samp_rate" placeholder="Enter Sample Rate"
+                                    value="44100">
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="col-25">
+                                <label for="chunk">Chunks</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col-75">
+                                <input type="text" name="chunk" id="chunk" placeholder="Enter Chunk" value="4096">
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="col-25">
+                                <label for="record_secs">Record Secs</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col-75">
+                                <input type="text" name="record_secs" id="record_secs"
+                                    placeholder="Enter Recording Duration(secs)" value="3">
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="col-25">
+                                <label for="time">Cron - Time</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col-75">
+                                <input type="text" name="time" id="time" placeholder="Enter Recording Time"
+                                    value="08:30">
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="col-25">
+                                <label for="time">Cron Cmd</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col-75">
+                                <select name="cmds" id="cmds">
+                                    <option value="make">Make</option>
+                                    <option value="update">Update</option>
+                                    <option value="remove">Remove</option>
+                                    <option value="showjobs">Show</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="col-25">
+                                <label for="dev_index">Dev Index</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col-75">
+                                <input type="text" name="dev_index" id="dev_index" placeholder="Enter Dev Index"
+                                    value="2">
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            <div class="row">
+                                <input type="submit" value="submit">
+                                <div>
+                        </td>
+                        <td>
+                            <div class="row">
+                                <input type="reset" value="reset">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
